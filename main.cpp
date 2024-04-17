@@ -2,8 +2,8 @@
 
 void swap (int *a, int *b) {
 	int c = *a;
-	// *a = b;
-	// *b = c;
+	*a = *b;
+	*b = c;
 }
 
 void arraySwap (int *arr) {
@@ -15,13 +15,13 @@ void arraySwap (int *arr) {
 int main() {
 	//17.4.1
 	int a = 10;
-	int b = 20;
-	// swap(a, b);
-	std::cout << a << " " << b;
+    int b = 20;
+    swap(&a, &b);
+	std::cout << a << " " << b << std::endl;
 	
 	//17.4.2
-	int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-	arraySwap(arr);
+	// int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	// arraySwap(arr);
 	
 	return 0;
 }
